@@ -1,0 +1,14 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: 'raleway_m', sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --dark: #070707;
+  --sizeindex: calc(1vw + 1vh);
+  --transition: 0.75s cubic-bezier(0.2, 0.5, 0, 1);
+}

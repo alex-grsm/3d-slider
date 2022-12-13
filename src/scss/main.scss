@@ -1,0 +1,102 @@
+// базовые подключения
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'settings';
+
+// подключения компонентов страницы
+// @import "./components/header";
+
+.page__body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark);
+  color: #fff;
+  // font-size: calc(var(--sizeindex) * .8);
+}
+
+.parallax_gallery {
+  height: 100vh;
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+.slider {
+  height: 100%;
+  transform: rotate(15deg);
+  overflow: visible;
+  top: 10vh;
+
+  &__wrapper {
+    transition: var(--transition) !important;
+    will-change: transform;
+  }
+
+  &__item {
+    max-height: 75vh;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+    &.opened {
+      z-index: 2;
+      transform: rotate(-15deg) scale(1.45);
+      box-shadow: rgb(0 0 0 / 0.75) 0 0 0 10000px;
+    }
+  }
+
+  &__img {
+    width: 300%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    left: -100%;
+    transition: var(--transition) !important;
+    will-change: transform;
+  }
+
+  &_bg {
+    z-index: 0;
+    transform: rotate(-20deg) !important;
+    top: -90vh;
+    left: -10vh;
+    opacity: 0.15;
+    filter: blur(120px) saturate(10);
+
+    .slider__item {
+      max-height: 100vh;
+    }
+  }
+}
+
+.description {
+  position: absolute;
+  font-size: calc(var(--sizeindex) * 0.8);
+  top: 20vh;
+  left: 8vw;
+  max-width: 24vw;
+  transition: opacity var(--transition), transform var(--transition);
+
+  .logo {
+    font-size: calc(var(--sizeindex) * 3.6);
+    font-weight: 900;
+    display: inline-block;
+    background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    margin: 0;
+    opacity: 0.9;
+    transition: transform var(--transition);
+    transition-duration: 3s;
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(5vh);
+    p {
+      transform: translateY(2vh);
+    }
+  }
+}
