@@ -1,2 +1,6 @@
-@include font-face("raleway_m", "../fonts/raleway-v22-cyrillic-300", 300, normal);
-@include font-face("raleway_m", "../fonts/raleway-v22-cyrillic-900", 900, normal);
+
+@include font-face("roboto_st", "../fonts/roboto-regular-webfont", 400, normal);
+@include font-face("roboto_st", "../fonts/roboto-italic-webfont", 400, italic);
+@include font-face("roboto_st", "../fonts/roboto-bold-webfont", 700, normal);
+@include font-face("roboto_st", "../fonts/roboto-bolditalic-webfont", 700, italic);
+@include font-face("assassin_st", "../fonts/assassin", 700, italic);

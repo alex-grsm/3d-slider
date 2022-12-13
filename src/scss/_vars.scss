@@ -1,14 +1,16 @@
-// если вы хотите использовать sass-переменные - удалите root
-// colors
 :root {
-  // base
-  --font-family: 'raleway_m', sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
-  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
-  // colors
-  // --dark: #070707;
-  // --sizeindex: calc(1vw + 1vh);
-  // --transition: 0.75s cubic-bezier(0.2, 0.5, 0, 1);
+	--accent: #CC8869;
+	--text: #333;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: "roboto_st", sans-serif;
+	--systemfont: -apple-system, "BlinkMacSystemFont", Arial, sans-serif;
+	--padding: 120px;
+	--transition: cubic-bezier(.4, 0, 0, 1);
 }
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; }
